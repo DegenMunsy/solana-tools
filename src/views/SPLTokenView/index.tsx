@@ -3,7 +3,7 @@ import { FC, useState } from "react";
 import { useWallet, useConnection } from "@solana/wallet-adapter-react";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 
-import { SolanaLogo, ConnectWallet } from "components";
+import { ConnectWallet } from "components";
 import styles from "./index.module.css";
 
 import { CreateTokenButton } from '../../utils/CreateTokenButton';
@@ -59,7 +59,7 @@ export const SPLTokenView: FC = ({ }) => {
               <ul className="text-xs sm:text-xl">
                 <li>
                   <Link href="/">
-                    <a>SOLANA-TOOLS</a>
+                    <a>DOJO MEMES</a>
                   </Link>
                 </li>
               </ul>
@@ -76,14 +76,14 @@ export const SPLTokenView: FC = ({ }) => {
             <div className="text-center hero-content w-full">
               <div className="w-full">
                 <h1 className="mb-5 text-5xl">
-                  Create Solana <SolanaLogo /> token
+                  MINT YOUR MEME
                 </h1>
 
                 <div className="md:w-[600px] mx-auto">
                   <div className="md:w-[480px] flex flex-col m-auto">
 
-                    <div className="my-2 uppercase underline flex font-bold text-2xl">Token infos</div>
-                    <label className="underline flex font-bold">Token Name</label>
+                    <div className="my-2 uppercase underline flex font-bold text-2xl">NFT INFO</div>
+                    <label className="underline flex font-bold">NFT Name</label>
                     <input className="my-[1%] md:w-[480px] text-left text-black pl-1 border-2 rounded-2xl border-black"
                       type="text"
                       placeholder="Token Name"
@@ -97,7 +97,7 @@ export const SPLTokenView: FC = ({ }) => {
                       onChange={(e) => setSymbol(e.target.value)}
                     />
 
-                    <label className="underline flex font-bold">Number of tokens to mint</label>
+                    <label className="underline flex font-bold">Number of NFTs to mint</label>
                     <input className="my-[1%] md:w-[480px] text-left text-black pl-1 border-2 rounded-2xl border-black"
                       type="number"
                       min="0"
@@ -105,7 +105,7 @@ export const SPLTokenView: FC = ({ }) => {
                       onChange={(e) => setQuantity(parseInt(e.target.value))}
                     />
 
-                    <label className="underline flex font-bold">Number of decimals</label>
+                    <label className="underline flex font-bold">Number of decimals (set to 0)</label>
                     <input className="my-[1%] md:w-[480px] text-left text-black pl-1 border-2 rounded-2xl border-black"
                       type="number"
                       min="0"
@@ -114,7 +114,7 @@ export const SPLTokenView: FC = ({ }) => {
                     />
 
 
-                    <div className="mt-5 mb-2 uppercase underline flex font-bold text-2xl">Metadatas</div>
+                    <div className="mt-5 mb-2 uppercase underline flex font-bold text-2xl">Metadata + MEME</div>
                     <div className="flex justify-center">
                       {metadataMethod == 'url' ?
                         <button className="text-white mx-2  font-semibold bg-[#343e4f] md:w-[280px] rounded-full shadow-xl border">Use an existing medatata URL</button>
